@@ -1,0 +1,183 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Campus Store Performance Dashboard</title>
+<style>
+body{font-family:Inter,Arial,sans-serif;margin:0;background:#f4f6fb;color:#172033}header{background:#14213d;color:white;padding:28px 5vw}
+main{max-width:1200px;margin:28px auto;padding:0 20px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.card{background:white;border-radius:14px;padding:20px;box-shadow:0 3px 14px #16213e12}.kpi{font-size:28px;font-weight:700;margin-top:8px}
+section{background:white;padding:22px;border-radius:14px;margin:18px 0;box-shadow:0 3px 14px #16213e12}
+img{max-width:100%;height:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:9px;border-bottom:1px solid #e5e9f1;text-align:right}th:first-child,td:first-child{text-align:left}.note{color:#5d687d;font-size:13px}
+</style></head><body><header><h1>Campus Store Performance Analytics</h1><p>Four-week category-level performance review · Synthetic dataset</p></header><main>
+<div class="grid">
+<div class="card">Total visits<div class="kpi">3,060</div></div>
+<div class="card">Total orders<div class="kpi">624</div></div>
+<div class="card">Gross revenue<div class="kpi">₹80,550</div></div>
+<div class="card">Returns<div class="kpi">43</div></div>
+</div>
+<section><h2>Executive finding</h2><p>Books visits rose 40% from Week 1 to Week 4, while orders and gross revenue each fell 30%. Conversion declined from 20% to 10%; return rate rose from 5% to 17.86%. Week 3 is the first visible deterioration. The dataset does not establish its cause.</p><p class="note">Revenue is gross before refunds. Refund amounts, costs, return reasons and customer-level data are not provided; net revenue and profit cannot be calculated.</p></section>
+<section><h2>Gross revenue trend</h2><img src="gross_revenue_by_category.png"></section>
+<section><h2>Category rate trends</h2><div class="grid">
+<div><h3>Books</h3><img src="books_rates.png"></div><div><h3>Accessories</h3><img src="accessories_rates.png"></div><div><h3>Stationery</h3><img src="stationery_rates.png"></div>
+</div></section>
+<section><h2>Weekly category metrics</h2><table border="1" class="dataframe data">
+  <thead>
+    <tr style="text-align: right;">
+      <th>week</th>
+      <th>category</th>
+      <th>visits</th>
+      <th>orders</th>
+      <th>revenue</th>
+      <th>returns</th>
+      <th>conversion_rate</th>
+      <th>return_rate</th>
+      <th>aov_inr</th>
+      <th>revenue_per_visit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Accessories</td>
+      <td>150</td>
+      <td>15</td>
+      <td>6000</td>
+      <td>2</td>
+      <td>10.0%</td>
+      <td>13.3%</td>
+      <td>₹400</td>
+      <td>₹40.00</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Books</td>
+      <td>200</td>
+      <td>40</td>
+      <td>8000</td>
+      <td>2</td>
+      <td>20.0%</td>
+      <td>5.0%</td>
+      <td>₹200</td>
+      <td>₹40.00</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Stationery</td>
+      <td>300</td>
+      <td>90</td>
+      <td>4500</td>
+      <td>3</td>
+      <td>30.0%</td>
+      <td>3.3%</td>
+      <td>₹50</td>
+      <td>₹15.00</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Accessories</td>
+      <td>180</td>
+      <td>18</td>
+      <td>7200</td>
+      <td>3</td>
+      <td>10.0%</td>
+      <td>16.7%</td>
+      <td>₹400</td>
+      <td>₹40.00</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Books</td>
+      <td>220</td>
+      <td>44</td>
+      <td>8800</td>
+      <td>2</td>
+      <td>20.0%</td>
+      <td>4.5%</td>
+      <td>₹200</td>
+      <td>₹40.00</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Stationery</td>
+      <td>320</td>
+      <td>96</td>
+      <td>4800</td>
+      <td>4</td>
+      <td>30.0%</td>
+      <td>4.2%</td>
+      <td>₹50</td>
+      <td>₹15.00</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Accessories</td>
+      <td>210</td>
+      <td>21</td>
+      <td>8400</td>
+      <td>5</td>
+      <td>10.0%</td>
+      <td>23.8%</td>
+      <td>₹400</td>
+      <td>₹40.00</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Books</td>
+      <td>250</td>
+      <td>35</td>
+      <td>7000</td>
+      <td>4</td>
+      <td>14.0%</td>
+      <td>11.4%</td>
+      <td>₹200</td>
+      <td>₹28.00</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Stationery</td>
+      <td>350</td>
+      <td>105</td>
+      <td>5250</td>
+      <td>3</td>
+      <td>30.0%</td>
+      <td>2.9%</td>
+      <td>₹50</td>
+      <td>₹15.00</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Accessories</td>
+      <td>240</td>
+      <td>24</td>
+      <td>9600</td>
+      <td>6</td>
+      <td>10.0%</td>
+      <td>25.0%</td>
+      <td>₹400</td>
+      <td>₹40.00</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Books</td>
+      <td>280</td>
+      <td>28</td>
+      <td>5600</td>
+      <td>5</td>
+      <td>10.0%</td>
+      <td>17.9%</td>
+      <td>₹200</td>
+      <td>₹20.00</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Stationery</td>
+      <td>360</td>
+      <td>108</td>
+      <td>5400</td>
+      <td>4</td>
+      <td>30.0%</td>
+      <td>3.7%</td>
+      <td>₹50</td>
+      <td>₹15.00</td>
+    </tr>
+  </tbody>
+</table></section>
+<section><h2>Recommended investigation</h2><ol><li>Review Books traffic sources, availability, pricing/promotions and stockouts around Week 3 as hypotheses to test.</li><li>Inspect Accessories return reasons and item mix; return rate rose from 13.33% to 25% across the period.</li><li>Collect item-level orders, refund amounts, return reasons, traffic source and stock availability.</li></ol></section>
+<p class="note">Prepared from supplied synthetic source files. See README and evidence logs for cleaning lineage, assumptions and validation.</p></main></body></html>
